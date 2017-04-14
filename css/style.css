@@ -1,0 +1,45 @@
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin:20px;
+  color: white;
+  letter-spacing: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+  font:20px;
+  cursor: pointer;
+}
+.grid:nth-child(1){
+  background-color: #2196F3;
+}
+.grid:nth-child(2){
+  background-color: #009688;
+}
+.grid:nth-child(3){
+  background-color:#E91E63;
+}
+
+
+.ripple {
+  position: absolute;
+  background: rgba(0, 0, 0, .15);
+  border-radius: 100%;
+  transform: scale(0);
+  pointer-events: none;
+}
+
+.ripple.show {
+  animation: ripple .5s ease-out;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
